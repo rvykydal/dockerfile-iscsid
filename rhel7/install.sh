@@ -68,8 +68,9 @@ function install_file ()
 }
 
 install_dir /etc/iscsi
-mkdir $prefix/var/lock/iscsi
-
 install_file /etc/iscsi/iscsid.conf
 install_file /etc/iscsi/initiatorname.iscsi
+
+mkdir $prefix/var/lock/iscsi
+install_dir /var/lib/iscsi
 
