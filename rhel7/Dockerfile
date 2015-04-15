@@ -1,7 +1,7 @@
 FROM rhel
 MAINTAINER Radek Vykydal <rvykydal@redhat.com>
 ENV container docker
-RUN yum -y update; yum -y install iscsi-initiator-utils; yum clean all
+RUN yum -y update && yum -y install iscsi-initiator-utils && yum clean all
 EXPOSE 3260
 
 LABEL Vendor="Red Hat"

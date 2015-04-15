@@ -1,7 +1,7 @@
 FROM fedora
 MAINTAINER Radek Vykydal <rvykydal@redhat.com>
 ENV container docker
-RUN yum -y update; yum -y install iscsi-initiator-utils; yum clean all
+RUN yum -y update && yum -y install iscsi-initiator-utils && yum clean all
 RUN systemctl enable iscsid.service
 EXPOSE 3260
 
